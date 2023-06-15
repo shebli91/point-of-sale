@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #c4dfdf;
+  padding: 1em 0;
+  list-style: none;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #f8f6f4;
+  font-weight: bold;
+}
