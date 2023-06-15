@@ -1,38 +1,47 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
-    <nav>
-      <ul className="navbar">
-        <li>
-          <Link className="navbar-link" to="/products">
-            Products
-          </Link>
-        </li>
-        <li>
-          <Link className="navbar-link" to="/categories">
-            Categories
-          </Link>
-        </li>
-        <li>
-          <Link className="navbar-link" to="/units">
-            Units
-          </Link>
-        </li>
-        <li>
-          <Link className="navbar-link" to="/pos">
-            POS
-          </Link>
-        </li>
-        <li>
-          <Link className="navbar-link" to="/login">
-            Login
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <div className="navbar">
+      <Link
+        to="/products"
+        className={`nav-item ${
+          location.pathname === "/products" ? "active" : ""
+        }`}
+      >
+        Products
+      </Link>
+      <Link
+        to="/categories"
+        className={`nav-item ${
+          location.pathname === "/categories" ? "active" : ""
+        }`}
+      >
+        Categories
+      </Link>
+      <Link
+        to="/units"
+        className={`nav-item ${location.pathname === "/units" ? "active" : ""}`}
+      >
+        Units
+      </Link>
+      <Link
+        to="/pos"
+        className={`nav-item ${location.pathname === "/pos" ? "active" : ""}`}
+      >
+        POS
+      </Link>
+      <Link
+        to="/login"
+        className={`nav-item ${location.pathname === "/login" ? "active" : ""}`}
+      >
+        Login
+      </Link>
+    </div>
   );
 };
 

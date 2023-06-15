@@ -1,13 +1,18 @@
 .navbar {
   display: flex;
   justify-content: space-around;
-  background-color: #c4dfdf;
+  background-color: #76d6d6;
   padding: 1em 0;
   list-style: none;
 }
 
-.navbar-link {
+.nav-item {
   text-decoration: none;
   color: #f8f6f4;
   font-weight: bold;
+}
+
+.active {
+  color: #8eadad;
+  text-decoration: none;
 }
