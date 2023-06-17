@@ -86,8 +86,9 @@ function Products() {
       <DeleteConfirmationModal
         isOpen={isDeleteModalOpen}
         onRequestClose={handleCloseDeleteModal}
-        product={selectedProduct || {}}
+        object={selectedProduct || {}}
         onDelete={handleDeleteProduct}
+        objectType="product"
       />
     </div>
   );
