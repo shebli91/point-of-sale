@@ -1,11 +1,18 @@
 import React from "react";
+import PosProductTable from "../components/PosProductTable";
+import PosNewCartModal from "../components/PosNewCartModal";
+import PosCartList from "../components/PosCartList";
+import PosCheckoutBox from "../components/PosCheckoutBox";
 
-const Pos = () => {
+function POS() {
   return (
     <div>
-      <h1>Pos Page</h1>
+      <PosNewCartModal />
+      <PosCartList />
+      <PosProductTable />
+      <PosCheckoutBox />
     </div>
   );
-};
+}
 
-export default Pos;
+export default POS;

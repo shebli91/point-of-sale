@@ -25,7 +25,16 @@ const CartsContextProvider = ({ children }) => {
   }, []);
 
   const createNewCart = async (cart) => {
-    const response = await createCart(cart);
+    const cartToCreate = {
+      client: {
+        firstName: cart.firstName,
+        lastName: cart.lastName,
+        address: cart.address,
+      },
+      description: cart.description,
+      products: [],
+    };
+    const response = await createCart(cartToCreate);
     setCarts([...carts, response.data]);
   };
 
@@ -35,24 +44,31 @@ const CartsContextProvider = ({ children }) => {
   };
 
   const addProductToCart = async (id, product) => {
-    const response = await addToCart(id, product);
-    setSelectedCart(response.data);
+    const response = await fetchCartById(id);
+    const cart = response.data;
+
+    const productInCart = cart.products.find((p) => p.id === product.id);
+    if (productInCart) {
+      productInCart.quantity += 1;
+      await updateProductInCart(id, productInCart.id, productInCart);
+    } else {
+      const newProduct = { ...product, quantity: 1 };
+      await addToCart(id, newProduct);
+    }
+    const updatedCart = await fetchCartById(id);
+    setSelectedCart(updatedCart.data);
   };
 
   const updateCartProduct = async (cartId, productId, updatedProduct) => {
-    const response = await updateProductInCart(
-      cartId,
-      productId,
-      updatedProduct
-    );
-    setSelectedCart(response.data);
+    await updateProductInCart(cartId, productId, updatedProduct);
+    const updatedCartResponse = await fetchCartById(cartId);
+    setSelectedCart(updatedCartResponse.data);
   };
 
   const removeProductFromCart = async (cartId, productId) => {
     await removeFromCart(cartId, productId);
-    setSelectedCart(
-      selectedCart.products.filter((product) => product.id !== productId)
-    );
+    const updatedCartResponse = await fetchCartById(cartId);
+    setSelectedCart(updatedCartResponse.data);
   };
 
   const deleteCartById = async (id) => {

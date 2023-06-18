@@ -4,6 +4,7 @@ import {
   addProduct,
   updateProduct,
   deleteProduct,
+  fetchProductById,
 } from "../services/api";
 
 export const ProductsContext = createContext();
@@ -70,6 +71,7 @@ export const ProductsContextProvider = (props) => {
         addNewProduct,
         updateExistingProduct,
         deleteExistingProduct,
+        fetchProductById,
       }}
     >
       {props.children}

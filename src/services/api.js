@@ -12,6 +12,10 @@ export const fetchProducts = () => {
   return api.get("/products");
 };
 
+export const fetchProductById = (id) => {
+  return api.get(`/products/${id}`);
+};
+
 export const addProduct = (product) => {
   return api.post("/products", product);
 };
@@ -74,16 +78,64 @@ export const fetchCartById = (id) => {
   return api.get(`/carts/${id}`);
 };
 
-export const addToCart = (id, product) => {
-  return api.post(`/carts/${id}/products`, product);
+export const addToCart = async (id, product) => {
+  const { data: cart } = await api.get(`/carts/${id}`);
+  cart.products.push(product);
+  const { data: updatedCart } = await api.put(`/carts/${id}`, cart);
+  return updatedCart;
 };
 
-export const updateProductInCart = (cartId, productId, updatedProduct) => {
-  return api.put(`/carts/${cartId}/products/${productId}`, updatedProduct);
+export const updateProductInCart = async (
+  cartId,
+  productId,
+  updatedProduct
+) => {
+  const { data: cart } = await api.get(`/carts/${cartId}`);
+  const productIndex = cart.products.findIndex(
+    (product) => product.id === productId
+  );
+
+  if (productIndex !== -1) {
+    cart.products[productIndex] = updatedProduct;
+    const { data: updatedCart } = await api.put(`/carts/${cartId}`, cart);
+    return updatedCart;
+  } else {
+    throw new Error("Product not found in cart");
+  }
 };
 
-export const removeFromCart = (cartId, productId) => {
-  return api.delete(`/carts/${cartId}/products/${productId}`);
+export const removeFromCart = async (cartId, productId) => {
+  const { data: cart } = await api.get(`/carts/${cartId}`);
+  const productIndex = cart.products.findIndex(
+    (product) => product.id === productId
+  );
+
+  if (productIndex !== -1) {
+    cart.products.splice(productIndex, 1);
+    return api.put(`/carts/${cartId}`, cart);
+  } else {
+    throw new Error("Product not found in cart");
+  }
+};
+
+export const getCartWithProductDetails = async (cartId) => {
+  const { data: cart } = await api.get(`/carts/${cartId}`);
+  const productsWithDetails = await Promise.all(
+    cart.products.map(async (product) => {
+      const { data: productDetails } = await api.get(
+        `/products/${product.productId}`
+      );
+      return {
+        ...productDetails,
+        quantity: product.quantity,
+      };
+    })
+  );
+
+  return {
+    ...cart,
+    products: productsWithDetails,
+  };
 };
 
 export const deleteCart = (id) => {
