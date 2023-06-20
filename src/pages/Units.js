@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar";
 import UnitList from "../components/UnitList";
 import UnitModal from "../components/UnitModal";
 import DeleteConfirmationModal from "../components/DeleteConfirmationModal";
+import styles from "./Page.module.css";
 
 function UnitsPage() {
   const {
@@ -75,9 +76,11 @@ function UnitsPage() {
   };
 
   return (
-    <div>
-      <SearchBar searchText={searchText} setSearchText={setSearchText} />
-      <button onClick={() => handleOpenModal({})}>Add New Unit</button>
+    <div className={styles.Container}>
+      <div className={styles.topActions}>
+        <SearchBar searchText={searchText} setSearchText={setSearchText} />
+        <button onClick={() => handleOpenModal({})}>Add New Unit</button>
+      </div>
       <UnitList
         units={filteredUnits}
         onEdit={handleOpenModal}
@@ -88,6 +91,7 @@ function UnitsPage() {
         onRequestClose={handleCloseModal}
         unit={selectedUnit || {}}
         onSubmit={handleSubmit}
+        onClose={handleCloseModal}
       />
       <DeleteConfirmationModal
         isOpen={isDeleteModalOpen}

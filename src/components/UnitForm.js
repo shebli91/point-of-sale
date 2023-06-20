@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { UnitsOfMeasureContext } from "../contexts/unitsOfMeasureContext";
+import styles from "./Form.module.css";
 
-function UnitForm({ unit, onClose }) {
+function UnitForm({ unit, onClose, onRequestClose }) {
   const { addNewUnit, updateExistingUnit } = useContext(UnitsOfMeasureContext);
 
   const [formUnit, setFormUnit] = useState(
@@ -45,48 +46,79 @@ function UnitForm({ unit, onClose }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
+    <form onSubmit={handleSubmit} className={styles.container}>
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="name">
+          Name:
+        </label>
         <input
           type="text"
+          id="name"
           name="name"
           value={formUnit.name || ""}
           onChange={handleChange}
+          required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <label>
-        Base Unit:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="baseUnit">
+          Base Unit:
+        </label>
         <input
           type="text"
+          id="baseUnit"
           name="baseUnit"
           value={formUnit.baseUnit || ""}
           onChange={handleChange}
+          required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <label>
-        Conversion Factor:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="conversionFactor">
+          Conversion Factor:
+        </label>
         <input
           type="text"
+          id="conversionFactor"
           name="conversionFactor"
           value={formUnit.conversionFactor || ""}
           onChange={handleChange}
+          required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <label>
-        Short Name:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="shortName">
+          Short Name:
+        </label>
         <input
           type="text"
+          id="shortName"
           name="shortName"
           value={formUnit.shortName || ""}
           onChange={handleChange}
+          required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <button type="submit">submit</button>
+      <div className={styles.buttonContainer}>
+        <button type="submit" className={styles.submitButton}>
+          Submit
+        </button>
+        <button
+          type="button"
+          className={styles.closeButton}
+          onClick={onRequestClose}
+        >
+          Close
+        </button>
+      </div>
     </form>
   );
 }

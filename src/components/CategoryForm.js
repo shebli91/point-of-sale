@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { CategoriesContext } from "../contexts/categoriesContext";
-import styles from "./CategoryForm.module.css";
+import styles from "./Form.module.css";
 
 function CategoryForm({ category, onClose, onRequestClose }) {
   const { addNewCategory, updateExistingCategory } =

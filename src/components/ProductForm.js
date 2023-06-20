@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { ProductsContext } from "../contexts/productsContext";
 import { CategoriesContext } from "../contexts/categoriesContext";
 import { UnitsOfMeasureContext } from "../contexts/unitsOfMeasureContext";
-import styles from "./ProductForm.module.css";
+import styles from "./Form.module.css";
 
 function ProductForm({ product, onClose, onRequestClose }) {
   const { addNewProduct, updateExistingProduct } = useContext(ProductsContext);

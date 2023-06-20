@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./CategoryList.module.css";
+import styles from "./List.module.css";
 
 function CategoryList({ categories, onEdit, onDelete }) {
   return (
-    <div className={styles.categoryTableContainer}>
-      <table className={styles.categoryTable}>
+    <div className={styles.TableContainer}>
+      <table className={styles.Table}>
         <thead>
           <tr>
             <th>#</th>

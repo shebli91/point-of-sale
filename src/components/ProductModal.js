@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import ProductForm from "./ProductForm";
-import styles from "./ProductModal.module.css";
+import styles from "./Modal.module.css";
 
 Modal.setAppElement("#root");
 

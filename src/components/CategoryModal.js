@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import CategoryForm from "./CategoryForm";
-import styles from "./CategoryModal.module.css";
+import styles from "./Modal.module.css";
 
 Modal.setAppElement("#root");
 
