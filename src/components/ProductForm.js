@@ -2,8 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { ProductsContext } from "../contexts/productsContext";
 import { CategoriesContext } from "../contexts/categoriesContext";
 import { UnitsOfMeasureContext } from "../contexts/unitsOfMeasureContext";
+import styles from "./ProductForm.module.css";
 
-function ProductForm({ product, onClose }) {
+function ProductForm({ product, onClose, onRequestClose }) {
   const { addNewProduct, updateExistingProduct } = useContext(ProductsContext);
 
   const { categories } = useContext(CategoriesContext);
@@ -64,44 +65,60 @@ function ProductForm({ product, onClose }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
+    <form onSubmit={handleSubmit} className={styles.container}>
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="name">
+          Name:
+        </label>
         <input
+          id="name"
           name="name"
           value={formProduct.name || ""}
           onChange={handleChange}
           required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <label>
-        Description:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="description">
+          Description:
+        </label>
         <textarea
+          id="description"
           name="description"
           value={formProduct.description || ""}
           onChange={handleChange}
           required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <label>
-        Code:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="code">
+          Code:
+        </label>
         <input
+          id="code"
           name="code"
           value={formProduct.code || ""}
           onChange={handleChange}
           required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <label>
-        Category:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="category">
+          Category:
+        </label>
         <select
+          id="category"
           name="category"
           value={formProduct.category || ""}
           onChange={handleChange}
           required
+          className={styles.input}
         >
           {categories &&
             categories.map((category) => (
@@ -110,36 +127,48 @@ function ProductForm({ product, onClose }) {
               </option>
             ))}
         </select>
-      </label>
+      </div>
 
-      <label>
-        Image URL:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="image">
+          Image URL:
+        </label>
         <input
+          id="image"
           name="image"
           value={formProduct.images[0] || ""}
           onChange={handleChange}
           required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <label>
-        Price:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="price">
+          Price:
+        </label>
         <input
+          id="price"
           name="price"
           type="number"
           value={formProduct.price || ""}
           onChange={handleChange}
           required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <label>
-        Unit of Measure:
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="unit">
+          Unit of Measure:
+        </label>
         <select
+          id="unit"
           name="unit"
           value={formProduct.unit || ""}
           onChange={handleChange}
           required
+          className={styles.input}
         >
           {units &&
             units.map((unit) => (
@@ -148,9 +177,20 @@ function ProductForm({ product, onClose }) {
               </option>
             ))}
         </select>
-      </label>
+      </div>
 
-      <button type="submit">Submit</button>
+      <div className={styles.buttonContainer}>
+        <button type="submit" className={styles.submitButton}>
+          Submit
+        </button>
+        <button
+          type="button"
+          className={styles.closeButton}
+          onClick={onRequestClose}
+        >
+          Close
+        </button>
+      </div>
     </form>
   );
 }

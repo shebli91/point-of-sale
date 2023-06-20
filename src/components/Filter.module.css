@@ -1,0 +1,14 @@
+.filterContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0.3125rem;
+}
+
+.filterSelect {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid #c4dfdf;
+  border-radius: 0.3125rem;
+  background-color: #e3f4f4;
+  color: #333;
+}

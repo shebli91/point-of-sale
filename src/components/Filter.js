@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Filter.module.css";
 
 function Filter({ options, filter, onFilterChange }) {
   const handleChange = (event) => {
@@ -6,14 +7,20 @@ function Filter({ options, filter, onFilterChange }) {
   };
 
   return (
-    <select value={filter} onChange={handleChange}>
-      <option value="">All Categories</option>
-      {options.map((option, index) => (
-        <option key={index} value={option}>
-          {option}
-        </option>
-      ))}
-    </select>
+    <div className={styles.filterContainer}>
+      <select
+        className={styles.filterSelect}
+        value={filter}
+        onChange={handleChange}
+      >
+        <option value="">All Categories</option>
+        {options.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }
 

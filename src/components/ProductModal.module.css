@@ -1,0 +1,52 @@
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ReactModal__Content {
+  margin-top: 0;
+  background: #fff;
+  color: #333;
+  outline: none;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: auto;
+  width: 40%;
+}
+
+.ReactModal__Content h2 {
+  margin: 0; /* 25px */
+}
+
+.ReactModal__Content button:hover {
+  background-color: #96a3a3;
+}
+
+.modal-header {
+  text-align: center;
+  width: 100%;
+  background-color: #7adada;
+  color: white;
+  padding: 1rem 0;
+}
+
+@media (max-width: 900px) {
+  .ReactModal__Content {
+    width: 350px;
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+}

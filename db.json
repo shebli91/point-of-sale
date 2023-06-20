@@ -2,38 +2,38 @@
   "products": [
     {
       "id": 1,
-      "name": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549,
+      "name": "Samsung Galaxy S10",
+      "description": "An Samsung  mobile which is nothing like Samsung ",
+      "price": 138,
       "code": "P001",
       "unit": "piece",
       "category": "smartphones",
       "images": [
-        "https://i.dummyjson.com/data/products/1/1.jpg"
+        "https://m.media-amazon.com/images/I/51wOdWN7PeL._AC_UY218_.jpg"
       ]
     },
     {
       "id": 2,
       "name": "iPhone X",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": 899,
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology",
+      "price": 1450,
       "code": "P002",
       "unit": "piece",
       "category": "smartphones",
       "images": [
-        "https://i.dummyjson.com/data/products/2/1.jpg"
+        "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_UY218_.jpg"
       ]
     },
     {
       "id": 3,
-      "name": "Samsung Universe 9",
-      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-      "price": 1249,
+      "name": "Xiaomi Redmi Note 12",
+      "description": "Xiaomi Redmi Note 12 4G LTE (128GB + 4GB) Global Unlocked 6.67 50MP Triple (ONLY T-Moble/Tello/Mint USA Market) + (w/ 33W Fast Car Dual Charger Bundle)",
+      "price": 153,
       "code": "P003",
       "unit": "piece",
       "category": "smartphones",
       "images": [
-        "https://i.dummyjson.com/data/products/3/1.jpg"
+        "https://m.media-amazon.com/images/I/61brUtKPajL._AC_UY218_.jpg"
       ]
     },
     {
@@ -44,9 +44,7 @@
       "code": "P004",
       "unit": "piece",
       "category": "smartphones",
-      "images": [
-        "https://i.dummyjson.com/data/products/4/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/4/1.jpg"]
     },
     {
       "id": 5,
@@ -56,9 +54,7 @@
       "code": "P005",
       "unit": "piece",
       "category": "smartphones",
-      "images": [
-        "https://i.dummyjson.com/data/products/5/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/5/1.jpg"]
     },
     {
       "id": 6,
@@ -69,7 +65,7 @@
       "unit": "piece",
       "category": "laptops",
       "images": [
-        "https://i.dummyjson.com/data/products/6/1.png"
+        "https://m.media-amazon.com/images/I/61bX2AoGj2L._AC_UY218_.jpg"
       ]
     },
     {
@@ -80,9 +76,7 @@
       "code": "P007",
       "unit": "piece",
       "category": "laptops",
-      "images": [
-        "https://i.dummyjson.com/data/products/7/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/7/1.jpg"]
     },
     {
       "id": 8,
@@ -92,9 +86,7 @@
       "code": "P008",
       "unit": "piece",
       "category": "laptops",
-      "images": [
-        "https://i.dummyjson.com/data/products/8/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/8/1.jpg"]
     },
     {
       "id": 9,
@@ -104,9 +96,7 @@
       "code": "P009",
       "unit": "piece",
       "category": "laptops",
-      "images": [
-        "https://i.dummyjson.com/data/products/9/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/9/1.jpg"]
     },
     {
       "id": 10,
@@ -116,9 +106,7 @@
       "code": "P010",
       "unit": "piece",
       "category": "laptops",
-      "images": [
-        "https://i.dummyjson.com/data/products/10/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/10/1.jpg"]
     },
     {
       "id": 11,
@@ -128,9 +116,7 @@
       "code": "P011",
       "unit": "bottle",
       "category": "fragrances",
-      "images": [
-        "https://i.dummyjson.com/data/products/11/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/11/1.jpg"]
     },
     {
       "id": 12,
@@ -140,9 +126,7 @@
       "code": "P012",
       "unit": "bottle",
       "category": "fragrances",
-      "images": [
-        "https://i.dummyjson.com/data/products/12/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/12/1.jpg"]
     },
     {
       "id": 13,
@@ -152,9 +136,7 @@
       "code": "P013",
       "unit": "bottle",
       "category": "fragrances",
-      "images": [
-        "https://i.dummyjson.com/data/products/13/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/13/1.jpg"]
     },
     {
       "id": 14,
@@ -164,9 +146,7 @@
       "code": "P014",
       "unit": "bottle",
       "category": "fragrances",
-      "images": [
-        "https://i.dummyjson.com/data/products/14/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/14/1.jpg"]
     },
     {
       "id": 15,
@@ -176,9 +156,7 @@
       "code": "P015",
       "unit": "bottle",
       "category": "fragrances",
-      "images": [
-        "https://i.dummyjson.com/data/products/15/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/15/1.jpg"]
     },
     {
       "id": 16,
@@ -188,9 +166,7 @@
       "code": "P016",
       "unit": "bottle",
       "category": "skincare",
-      "images": [
-        "https://i.dummyjson.com/data/products/16/1.png"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/16/1.png"]
     },
     {
       "id": 17,
@@ -200,9 +176,7 @@
       "code": "P017",
       "unit": "bottle",
       "category": "skincare",
-      "images": [
-        "https://i.dummyjson.com/data/products/17/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/17/1.jpg"]
     },
     {
       "id": 18,
@@ -212,9 +186,7 @@
       "code": "P018",
       "unit": "bottle",
       "category": "skincare",
-      "images": [
-        "https://i.dummyjson.com/data/products/18/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/18/1.jpg"]
     },
     {
       "id": 19,
@@ -225,7 +197,7 @@
       "unit": "bottle",
       "category": "skincare",
       "images": [
-        "https://i.dummyjson.com/data/products/19/1.jpg"
+        "https://m.media-amazon.com/images/I/51OjgAeTX1L._AC_UL320_.jpg"
       ]
     },
     {
@@ -236,9 +208,7 @@
       "code": "P020",
       "unit": "bottle",
       "category": "skincare",
-      "images": [
-        "https://i.dummyjson.com/data/products/20/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/20/1.jpg"]
     },
     {
       "id": 21,
@@ -248,9 +218,7 @@
       "code": "P021",
       "unit": "grams",
       "category": "groceries",
-      "images": [
-        "https://i.dummyjson.com/data/products/21/1.png"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/21/1.png"]
     },
     {
       "id": 22,
@@ -260,9 +228,7 @@
       "code": "P022",
       "unit": "grams",
       "category": "groceries",
-      "images": [
-        "https://i.dummyjson.com/data/products/22/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/22/1.jpg"]
     },
     {
       "id": 23,
@@ -273,7 +239,7 @@
       "unit": "bottle",
       "category": "groceries",
       "images": [
-        "https://i.dummyjson.com/data/products/23/1.jpg"
+        "https://m.media-amazon.com/images/I/61O1Hn9YArL._AC_UL320_.jpg"
       ]
     },
     {
@@ -284,9 +250,7 @@
       "code": "P024",
       "unit": "packet",
       "category": "groceries",
-      "images": [
-        "https://i.dummyjson.com/data/products/24/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/24/1.jpg"]
     },
     {
       "id": 25,
@@ -296,9 +260,7 @@
       "code": "P025",
       "unit": "grams",
       "category": "groceries",
-      "images": [
-        "https://i.dummyjson.com/data/products/25/1.png"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/25/1.png"]
     },
     {
       "id": 26,
@@ -308,9 +270,7 @@
       "code": "P026",
       "unit": "piece",
       "category": "home-decoration",
-      "images": [
-        "https://i.dummyjson.com/data/products/26/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/26/1.jpg"]
     },
     {
       "id": 27,
@@ -320,9 +280,7 @@
       "code": "P027",
       "unit": "piece",
       "category": "home-decoration",
-      "images": [
-        "https://i.dummyjson.com/data/products/27/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/27/1.jpg"]
     },
     {
       "id": 28,
@@ -332,9 +290,7 @@
       "code": "P028",
       "unit": "piece",
       "category": "home-decoration",
-      "images": [
-        "https://i.dummyjson.com/data/products/28/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/28/1.jpg"]
     },
     {
       "id": 29,
@@ -344,9 +300,7 @@
       "code": "P029",
       "unit": "piece",
       "category": "home-decoration",
-      "images": [
-        "https://i.dummyjson.com/data/products/29/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/29/1.jpg"]
     },
     {
       "id": 30,
@@ -356,9 +310,7 @@
       "code": "P030",
       "unit": "piece",
       "category": "home-decoration",
-      "images": [
-        "https://i.dummyjson.com/data/products/30/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/30/1.jpg"]
     }
   ],
   "categories": [

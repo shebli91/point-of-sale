@@ -6,6 +6,7 @@ import ProductModal from "../components/ProductModal";
 import DeleteConfirmationModal from "../components/DeleteConfirmationModal";
 import SearchBar from "../components/SearchBar";
 import Filter from "../components/Filter";
+import styles from "./Products.module.css";
 
 function Products() {
   const { products, deleteExistingProduct } = useContext(ProductsContext);
@@ -63,14 +64,20 @@ function Products() {
 
   return (
     <div>
-      <SearchBar searchText={searchText} setSearchText={setSearchText} />
-      <Filter
-        filter={filter}
-        setFilter={setFilter}
-        options={categories.map((c) => c.name)}
-        onFilterChange={(newFilter) => setFilter(newFilter)}
-      />
-      <button onClick={() => handleOpenModal({})}>Add Product</button>
+      <div className={styles.searchFilterContainer}>
+        <div className={styles.searchBarFilter}>
+          <SearchBar searchText={searchText} setSearchText={setSearchText} />
+          <Filter
+            filter={filter}
+            setFilter={setFilter}
+            options={categories.map((c) => c.name)}
+            onFilterChange={(newFilter) => setFilter(newFilter)}
+          />
+        </div>
+        <div>
+          <button onClick={() => handleOpenModal({})}>Add Product</button>
+        </div>
+      </div>
       <ProductList
         products={filteredProducts}
         onEdit={handleOpenModal}
