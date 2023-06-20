@@ -4,6 +4,7 @@ import CategoryList from "../components/CategoryList";
 import CategoryModal from "../components/CategoryModal";
 import DeleteConfirmationModal from "../components/DeleteConfirmationModal";
 import SearchBar from "../components/SearchBar";
+import styles from "./Categories.module.css";
 
 function Categories() {
   const { categories, deleteExistingCategory } = useContext(CategoriesContext);
@@ -53,9 +54,11 @@ function Categories() {
   }, [categories, searchText]);
 
   return (
-    <div>
-      <SearchBar searchText={searchText} setSearchText={setSearchText} />
-      <button onClick={() => handleOpenModal({})}>Add Category</button>
+    <div className={styles.categoriesContainer}>
+      <div className={styles.topActions}>
+        <SearchBar searchText={searchText} setSearchText={setSearchText} />
+        <button onClick={() => handleOpenModal({})}>Add Category</button>
+      </div>
       <CategoryList
         categories={filteredCategories}
         onEdit={handleOpenModal}

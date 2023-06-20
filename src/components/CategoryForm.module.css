@@ -52,12 +52,6 @@
   background-color: #0056b3;
 }
 
-.submitButton {
-}
-
-.closeButton {
-}
-
 @media (max-width: 900px) {
   .input-group {
     flex-direction: column;

@@ -1,0 +1,58 @@
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3f4f4;
+  border: 1px solid #c4dfdf;
+  padding: 2rem;
+  width: 80%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+button {
+  background-color: #7adada;
+  border: none;
+  color: #333;
+  padding: 0.625rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #96a3a3;
+}
+
+@media screen and (max-width: 900px) {
+  .modalContainer {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .modalContainer {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+}

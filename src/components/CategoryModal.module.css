@@ -22,15 +22,8 @@
   align-items: center;
   justify-content: flex-start;
   overflow: auto;
-  width: 40%;
-}
-
-.ReactModal__Content h2 {
-  margin: 0;
-}
-
-.ReactModal__Content button:hover {
-  background-color: #96a3a3;
+  max-width: 500px;
+  width: 50%;
 }
 
 .modal-header {
@@ -39,6 +32,14 @@
   background-color: #7adada;
   color: white;
   padding: 1rem 0;
+}
+
+.ReactModal__Content h2 {
+  margin: 0;
+}
+
+.ReactModal__Content button:hover {
+  background-color: #96a3a3;
 }
 
 @media (max-width: 900px) {

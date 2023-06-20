@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { CategoriesContext } from "../contexts/categoriesContext";
+import styles from "./CategoryForm.module.css";
 
-function CategoryForm({ category, onClose }) {
+function CategoryForm({ category, onClose, onRequestClose }) {
   const { addNewCategory, updateExistingCategory } =
     useContext(CategoriesContext);
 
@@ -33,18 +34,33 @@ function CategoryForm({ category, onClose }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Category Name:
+    <form onSubmit={handleSubmit} className={styles.container}>
+      <div className={styles["input-group"]}>
+        <label className={styles.label} htmlFor="name">
+          Category Name:
+        </label>
         <input
+          id="name"
           name="name"
           value={formCategory.name || ""}
           onChange={handleChange}
           required
+          className={styles.input}
         />
-      </label>
+      </div>
 
-      <button type="submit">Submit</button>
+      <div className={styles.buttonContainer}>
+        <button type="submit" className={styles.submitButton}>
+          Submit
+        </button>
+        <button
+          type="button"
+          className={styles.closeButton}
+          onClick={onRequestClose}
+        >
+          Close
+        </button>
+      </div>
     </form>
   );
 }
