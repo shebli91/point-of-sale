@@ -3,14 +3,21 @@ import PosProductTable from "../components/PosProductTable";
 import PosNewCartModal from "../components/PosNewCartModal";
 import PosCartList from "../components/PosCartList";
 import PosCheckoutBox from "../components/PosCheckoutBox";
+import styles from "./Pos.module.css";
 
 function POS() {
   return (
-    <div>
+    <div className={styles.container}>
+      <aside className={styles.cartList}>
+        <PosCartList />
+      </aside>
+      <main className={styles.productTable}>
+        <PosProductTable />
+      </main>
+      <aside className={styles.checkoutBox}>
+        <PosCheckoutBox />
+      </aside>
       <PosNewCartModal />
-      <PosCartList />
-      <PosProductTable />
-      <PosCheckoutBox />
     </div>
   );
 }

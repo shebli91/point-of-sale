@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CartsContext } from "../contexts/cartsContext";
 import { ProductsContext } from "../contexts/productsContext";
+import styles from "./PosProductInCart.module.css";
 
 const PosProductInCart = ({ product: productProp }) => {
   const { selectedCart, updateCartProduct, removeProductFromCart } =
@@ -40,14 +41,33 @@ const PosProductInCart = ({ product: productProp }) => {
   };
 
   return (
-    <div>
-      <h4>{name}</h4>
-      <p>${price}</p>
-      <p>Quantity: {quantity}</p>
-      <p>Total: ${quantity * price}</p>
-      <button onClick={increaseQuantity}>+</button>
-      <button onClick={decreaseQuantity}>-</button>
-      <button onClick={handleRemoveProduct}>Delete</button>
+    <div className={styles.productInCart}>
+      <div className={styles.productDetails}>
+        <h4 className={styles.productName}>{name}</h4>
+        <p>${price}</p>
+        <p className={styles.quantity}>Q: {quantity}</p>
+        <p>Total: ${quantity * price}</p>
+      </div>
+      <div className={styles.buttons}>
+        <button
+          className={`${styles.actionButton} ${styles.increaseButton}`}
+          onClick={increaseQuantity}
+        >
+          +
+        </button>
+        <button
+          className={`${styles.actionButton} ${styles.decreaseButton}`}
+          onClick={decreaseQuantity}
+        >
+          -
+        </button>
+        <button
+          className={`${styles.actionButton} ${styles.deleteButton}`}
+          onClick={handleRemoveProduct}
+        >
+          Delete
+        </button>
+      </div>
     </div>
   );
 };

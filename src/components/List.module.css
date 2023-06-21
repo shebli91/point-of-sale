@@ -30,20 +30,17 @@
 
 .editButton,
 .deleteButton {
-  margin-right: 1rem;
-  background-color: #7adada;
   border: none;
-  color: #333;
-  padding: 0.625rem 2rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #76d6d6;
+  color: white;
   cursor: pointer;
-  border-radius: 0.3125rem;
-  transition-duration: 0.4s;
+  transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #96a3a3;
+  background-color: #4bc7c7;
+  transform: scale(1.02);
 }

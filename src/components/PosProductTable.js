@@ -4,6 +4,7 @@ import { CartsContext } from "../contexts/cartsContext";
 import { CategoriesContext } from "../contexts/categoriesContext";
 import SearchBar from "../components/SearchBar";
 import Filter from "../components/Filter";
+import styles from "./PosProductTable.module.css";
 
 function PosProductTable() {
   const { products } = useContext(ProductsContext);
@@ -30,15 +31,17 @@ function PosProductTable() {
   }, [products, searchText, filter]);
 
   return (
-    <div>
-      <SearchBar searchText={searchText} setSearchText={setSearchText} />
-      <Filter
-        options={categories.map((c) => c.name)}
-        filter={filter}
-        onFilterChange={handleFilterChange}
-      />
+    <div className={styles.posProductTable}>
+      <div className={styles.searchFilterContainer}>
+        <SearchBar searchText={searchText} setSearchText={setSearchText} />
+        <Filter
+          options={categories.map((c) => c.name)}
+          filter={filter}
+          onFilterChange={handleFilterChange}
+        />
+      </div>
 
-      <table>
+      <table className={styles.table}>
         <thead>
           <tr>
             <th>Image</th>
@@ -57,6 +60,7 @@ function PosProductTable() {
               <td>${product.price}</td>
               <td>
                 <button
+                  className={styles.addToCartButton}
                   onClick={() => {
                     if (selectedCart) {
                       addProductToCart(selectedCart.id, product);

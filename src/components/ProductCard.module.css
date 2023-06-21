@@ -74,7 +74,8 @@ button {
 }
 
 button:hover {
-  background-color: #96a3a3;
+  background-color: #4bc7c7;
+  transform: scale(1.02);
 }
 
 /* Media query for screens smaller than 1276px */

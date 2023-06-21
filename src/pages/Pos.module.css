@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cartList {
+  flex-basis: 13%;
+}
+
+.productTable {
+  flex-basis: 52%;
+}
+
+.checkoutBox {
+  flex-basis: 35%;
+}
+
+@media (max-width: 930px) {
+  .container {
+    flex-direction: column;
+  }
+  .cartList {
+    flex-basis: auto;
+  }
+  .productTable,
+  .checkoutBox {
+    flex-basis: 100%;
+  }
+}

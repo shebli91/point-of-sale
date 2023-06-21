@@ -501,16 +501,5 @@
       "shortName": "lt"
     }
   ],
-  "carts": [
-    {
-      "client": {
-        "firstName": "hjfgh",
-        "lastName": "fghfg",
-        "address": "fgh"
-      },
-      "description": "hfgh",
-      "products": [],
-      "id": 1
-    }
-  ]
+  "carts": []
 }

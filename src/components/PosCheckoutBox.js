@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { CartsContext } from "../contexts/cartsContext";
 import { ProductsContext } from "../contexts/productsContext";
 import PosProductInCart from "./PosProductInCart";
+import styles from "./PosCheckoutBox.module.css";
 
 const PosCheckoutBox = () => {
   const { selectedCart, deleteCartById } = useContext(CartsContext);
@@ -25,7 +26,8 @@ const PosCheckoutBox = () => {
     fetchProducts();
   }, [selectedCart, fetchProductById]);
 
-  if (!selectedCart) return <p>No cart selected</p>;
+  if (!selectedCart)
+    return <p className={styles.noCartMessage}>No cart selected</p>;
 
   const { client } = selectedCart;
   const totalPrice = cartProducts.reduce(
@@ -35,22 +37,27 @@ const PosCheckoutBox = () => {
 
   const handleCheckout = () => {
     alert(
-      `Thank you for your purchase\nClient Name: ${selectedCart?.client?.firstName} ${selectedCart?.client?.lastName}\nClient Address: ${selectedCart?.client?.address}\nTotal Price: ${totalPrice}`
+      `Thank you for your purchase\nClient Name: ${selectedCart?.client?.firstName} ${selectedCart?.client?.lastName}\nClient Address: ${selectedCart?.client?.address}\nTotal Price: $${totalPrice}`
     );
 
     deleteCartById(selectedCart.id);
   };
 
   return (
-    <aside>
-      <h2>Name: {`${client?.firstName} ${client?.lastName}`}</h2>
-
-      <p>Address: {client?.address}</p>
-      {cartProducts.map((product) => (
-        <PosProductInCart key={product.id} product={product} />
-      ))}
-      <p>Total Price: ${totalPrice}</p>
-      <button onClick={handleCheckout}>Checkout</button>
+    <aside className={styles.checkoutBox}>
+      <h2 className={styles.header}>
+        Name: {`${client?.firstName} ${client?.lastName}`}
+      </h2>
+      <p className={styles.info}>Address: {client?.address}</p>
+      <div className={styles.productList}>
+        {cartProducts.map((product) => (
+          <PosProductInCart key={product.id} product={product} />
+        ))}
+      </div>
+      <p className={styles.total}>Total Price: ${totalPrice}</p>
+      <button className={styles.checkoutButton} onClick={handleCheckout}>
+        Checkout
+      </button>
     </aside>
   );
 };

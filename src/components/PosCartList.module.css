@@ -1,0 +1,95 @@
+.cartList {
+  background-color: #76d6d6;
+  max-height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.addButton {
+  background-image: linear-gradient(-180deg, #37aee2 0%, #1e96c8 100%);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+.addButton:hover {
+  background-image: linear-gradient(-180deg, #1d95c9 0%, #17759c 100%);
+  transform: scale(1.02);
+}
+
+@media (min-width: 768px) {
+  .addButton {
+    padding: 1rem 2rem;
+  }
+}
+
+.cart {
+  border: 0.0625rem solid #ccc;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.3125rem;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.cart:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 1.25rem rgba(0, 0, 0, 0.2);
+}
+
+.activeCart {
+  border: 0.0625rem solid #ccc;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.3125rem;
+  background: linear-gradient(to right, #b3e5fc, #81d4fa);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.activeCart:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 1.25rem rgba(0, 0, 0, 0.2);
+}
+
+/* For Chrome, Safari and Opera */
+.cartList::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+.cartList::-webkit-scrollbar-thumb {
+  background: linear-gradient(-180deg, #37aee2 0%, #1e96c8 100%);
+  border-radius: 0.375rem;
+}
+
+.cartList::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(-180deg, #1d95c9 0%, #17759c 100%);
+}
+
+.cartList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.375rem;
+}
+
+/* For Internet Explorer and Edge */
+.cartList {
+  scrollbar-width: thin;
+  scrollbar-color: #37aee2 #f1f1f1;
+}

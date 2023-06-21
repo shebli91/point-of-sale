@@ -1,0 +1,83 @@
+.checkoutBox {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #37aee2 0%, #1e96c8 100%);
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+  position: sticky;
+  top: 0;
+}
+
+.noCartMessage {
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  background-image: linear-gradient(to right, #1e96c8 0%, #37aee2 100%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.info {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.total {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.checkoutButton {
+  background-color: #fff;
+  color: #1e96c8;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.checkoutButton:hover {
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+
+/* For Chrome, Safari and Opera */
+.productList::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+.productList::-webkit-scrollbar-thumb {
+  background: linear-gradient(-180deg, #1e96c8 0%, #37aee2 100%);
+  border-radius: 0.375rem;
+}
+
+.productList::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(-180deg, #17759c 0%, #1d95c9 100%);
+}
+
+.productList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.375rem;
+}
+
+/* For Internet Explorer and Edge */
+.productList {
+  scrollbar-width: thin;
+  scrollbar-color: #1e96c8 #f1f1f1;
+}
+
+.productList {
+  max-height: 39rem;
+  overflow-y: auto;
+}

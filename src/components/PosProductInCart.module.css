@@ -1,0 +1,84 @@
+.productInCart {
+  background-image: linear-gradient(to right, #1e96c8 0%, #37aee2 100%);
+  padding: 0.1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.productName {
+  width: 50%;
+}
+
+.productPrice,
+.productQuantity,
+.productTotal {
+  width: 20%;
+}
+
+.quantity {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 8rem;
+}
+
+.actionButton {
+  background-color: #fff;
+  border-radius: 6.25rem;
+  box-shadow: rgba(118, 214, 214, 0.2) 0 -1.5625rem 1.125rem -0.875rem inset,
+    rgba(118, 214, 214, 0.15) 0 0.0625rem 0.125rem,
+    rgba(118, 214, 214, 0.15) 0 0.125rem 0.25rem,
+    rgba(118, 214, 214, 0.15) 0 0.25rem 0.5rem,
+    rgba(118, 214, 214, 0.15) 0 0.5rem 1rem,
+    rgba(118, 214, 214, 0.15) 0 1rem 2rem;
+  color: #1e96c8;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 0.21875rem 0.625rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: none;
+  font-size: 1rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: bold;
+}
+
+.actionButton:hover {
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.checkoutButton {
+  background-color: #fff;
+  color: #1e96c8;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.checkoutButton:hover {
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
