@@ -4,7 +4,7 @@ import SearchBar from "../components/SearchBar";
 import UnitList from "../components/UnitList";
 import UnitModal from "../components/UnitModal";
 import DeleteConfirmationModal from "../components/DeleteConfirmationModal";
-import styles from "./Page.module.css";
+import styles from "../styles/Page.module.css";
 
 function UnitsPage() {
   const {

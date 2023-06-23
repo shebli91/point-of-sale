@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { CartsContext } from "../contexts/cartsContext";
 import { ProductsContext } from "../contexts/productsContext";
 import PosProductInCart from "./PosProductInCart";
-import styles from "./PosCheckoutBox.module.css";
+import styles from "../styles/PosCheckoutBox.module.css";
 
 const PosCheckoutBox = () => {
   const { selectedCart, deleteCartById } = useContext(CartsContext);

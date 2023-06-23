@@ -4,7 +4,7 @@ import CategoryList from "../components/CategoryList";
 import CategoryModal from "../components/CategoryModal";
 import DeleteConfirmationModal from "../components/DeleteConfirmationModal";
 import SearchBar from "../components/SearchBar";
-import styles from "./Page.module.css";
+import styles from "../styles/Page.module.css";
 
 function Categories() {
   const { categories, deleteExistingCategory } = useContext(CategoriesContext);

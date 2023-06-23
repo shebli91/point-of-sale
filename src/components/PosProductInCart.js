@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CartsContext } from "../contexts/cartsContext";
 import { ProductsContext } from "../contexts/productsContext";
-import styles from "./PosProductInCart.module.css";
+import styles from "../styles/PosProductInCart.module.css";
 
 const PosProductInCart = ({ product: productProp }) => {
   const { selectedCart, updateCartProduct, removeProductFromCart } =

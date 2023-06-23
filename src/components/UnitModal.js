@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import UnitForm from "./UnitForm";
-import styles from "./Modal.module.css";
+import styles from "../styles/Modal.module.css";
 
 Modal.setAppElement("#root");
 

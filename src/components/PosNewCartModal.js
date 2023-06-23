@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import Modal from "react-modal";
 import { CartsContext } from "../contexts/cartsContext";
-import Styles from "./Modal.module.css";
-import styles from "./Form.module.css";
+import Styles from "../styles/Modal.module.css";
+import styles from "../styles/Form.module.css";
 
 Modal.setAppElement("#root");
 

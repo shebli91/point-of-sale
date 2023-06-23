@@ -4,7 +4,7 @@ import { CartsContext } from "../contexts/cartsContext";
 import { CategoriesContext } from "../contexts/categoriesContext";
 import SearchBar from "../components/SearchBar";
 import Filter from "../components/Filter";
-import styles from "./PosProductTable.module.css";
+import styles from "../styles/PosProductTable.module.css";
 
 function PosProductTable() {
   const { products } = useContext(ProductsContext);

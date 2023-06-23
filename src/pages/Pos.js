@@ -3,7 +3,7 @@ import PosProductTable from "../components/PosProductTable";
 import PosNewCartModal from "../components/PosNewCartModal";
 import PosCartList from "../components/PosCartList";
 import PosCheckoutBox from "../components/PosCheckoutBox";
-import styles from "./Pos.module.css";
+import styles from "../styles/Pos.module.css";
 
 function POS() {
   return (

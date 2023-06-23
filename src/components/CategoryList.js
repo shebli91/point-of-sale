@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./List.module.css";
+import styles from "../styles/List.module.css";
 
 function CategoryList({ categories, onEdit, onDelete }) {
   return (

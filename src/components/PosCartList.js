@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
-import styles from "./PosCartList.module.css";
 import { CartsContext } from "../contexts/cartsContext";
 import NewCartModal from "./PosNewCartModal";
+import styles from "../styles/PosCartList.module.css";
 
 const PosCartList = () => {
   const { carts, selectCart, selectedCart } = useContext(CartsContext);

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Filter.module.css";
+import styles from "../styles/Filter.module.css";
 
 function Filter({ options, filter, onFilterChange }) {
   const handleChange = (event) => {

@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  border: none;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 65rem;
+  height: 60%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  background-image: linear-gradient(to right, #1e96c8 50%, #37aee2 100%);
+  color: #ddd;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #76d6d6 50%, #78e7e7 100%);
+  color: #3f4142;
+  font-weight: bold;
+}
+
+.left input {
+  margin: 10px 0;
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.left button {
+  background: linear-gradient(to right, #76d6d6, #78e7e7);
+  color: #fff;
+}
+
+.registerSection p {
+  margin: 0 10px 0 0;
+  white-space: nowrap;
+}
+
+.registerSection p {
+  margin: 0 10px 0 0;
+}
+
+.loginButton {
+  background: linear-gradient(to right, #76d6d6, #78e7e7);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}

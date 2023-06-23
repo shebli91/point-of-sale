@@ -6,7 +6,7 @@ import ProductModal from "../components/ProductModal";
 import DeleteConfirmationModal from "../components/DeleteConfirmationModal";
 import SearchBar from "../components/SearchBar";
 import Filter from "../components/Filter";
-import styles from "./Products.module.css";
+import styles from "../styles/Products.module.css";
 
 function Products() {
   const { products, deleteExistingProduct } = useContext(ProductsContext);

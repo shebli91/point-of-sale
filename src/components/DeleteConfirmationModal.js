@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import styles from "./DeleteConfirmationModal.module.css";
+import styles from "../styles/DeleteConfirmationModal.module.css";
 
 Modal.setAppElement("#root");
 
