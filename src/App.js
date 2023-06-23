@@ -10,33 +10,78 @@ import Categories from "./pages/Categories";
 import Units from "./pages/Units";
 import Pos from "./pages/Pos";
 import Login from "./pages/Login";
+import { useContext } from "react";
 
 import { ProductsContextProvider as ProductsProvider } from "./contexts/productsContext";
 import { CategoriesContextProvider as CategoriesProvider } from "./contexts/categoriesContext";
 import { UnitsOfMeasureContextProvider as UnitsOfMeasureProvider } from "./contexts/unitsOfMeasureContext";
 import CartsProvider from "./contexts/cartsContext";
+import { UserContextProvider } from "./contexts/UserContext";
+import ProtectedRoute from "./ProtectedRoute";
+import { UserContext } from "./contexts/UserContext";
+
+function InnerApp() {
+  const { user } = useContext(UserContext);
+
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/products"
+          element={
+            <ProtectedRoute>
+              <Products />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/categories"
+          element={
+            <ProtectedRoute>
+              <Categories />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/units"
+          element={
+            <ProtectedRoute>
+              <Units />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/pos"
+          element={
+            <ProtectedRoute>
+              <Pos />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/login"
+          element={user ? <Navigate to="/products" replace /> : <Login />}
+        />
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
+    </Router>
+  );
+}
 
 function App() {
   return (
-    <ProductsProvider>
-      <CategoriesProvider>
-        <UnitsOfMeasureProvider>
-          <CartsProvider>
-            <Router>
-              <Navbar />
-              <Routes>
-                <Route path="/products" element={<Products />} />
-                <Route path="/categories" element={<Categories />} />
-                <Route path="/units" element={<Units />} />
-                <Route path="/pos" element={<Pos />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="*" element={<Navigate to="/products" />} />
-              </Routes>
-            </Router>
-          </CartsProvider>
-        </UnitsOfMeasureProvider>
-      </CategoriesProvider>
-    </ProductsProvider>
+    <UserContextProvider>
+      <ProductsProvider>
+        <CategoriesProvider>
+          <UnitsOfMeasureProvider>
+            <CartsProvider>
+              <InnerApp />
+            </CartsProvider>
+          </UnitsOfMeasureProvider>
+        </CategoriesProvider>
+      </ProductsProvider>
+    </UserContextProvider>
   );
 }
 

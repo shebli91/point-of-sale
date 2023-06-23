@@ -1,15 +1,26 @@
 import React from "react";
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../Pos-logo1.png";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const { user, setUser } = useContext(UserContext);
+
+  const handleLogout = () => {
+    setUser(null);
+  };
+
   const location = useLocation();
 
   return (
     <div className="navbar">
       <div className="logo-container">
-        <img src={logo} alt="Logo" className="navbar-logo" />
+        <Link to="/pos">
+          <img src={logo} alt="Logo" className="navbar-logo" />
+        </Link>
+        {user && <div className="welcome-message">Welcome, {user}!</div>}
       </div>
       <div className="nav-items-container">
         <Link
@@ -42,14 +53,20 @@ const Navbar = () => {
         >
           POS
         </Link>
-        <Link
-          to="/login"
-          className={`nav-item ${
-            location.pathname === "/login" ? "active" : ""
-          }`}
-        >
-          Login
-        </Link>
+        {user ? (
+          <button className="nav-item" onClick={handleLogout}>
+            Log Out
+          </button>
+        ) : (
+          <Link
+            to="/login"
+            className={`nav-item ${
+              location.pathname === "/login" ? "active" : ""
+            }`}
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
