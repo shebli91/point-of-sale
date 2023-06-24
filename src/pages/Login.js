@@ -29,6 +29,10 @@ function Login() {
     );
 
     if (user) {
+      const token = btoa(new Date().toISOString());
+      const expiryTime = new Date().getTime() + 60 * 60 * 1000; // current time + 1 hour
+
+      localStorage.setItem("token", JSON.stringify({ token, expiryTime }));
       setUser(user.username);
       navigate("/products");
     } else {
