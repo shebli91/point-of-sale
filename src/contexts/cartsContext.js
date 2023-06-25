@@ -33,6 +33,7 @@ const CartsContextProvider = ({ children }) => {
       },
       description: cart.description,
       products: [],
+      discountRate: cart.discountRate,
     };
     const response = await createCart(cartToCreate);
     setCarts([...carts, response.data]);

@@ -13,12 +13,14 @@ function PosNewCartModal({ isOpen, onRequestClose }) {
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
   const [description, setDescription] = useState("");
+  const [discountRate, setDiscountRate] = useState(0);
 
   const resetForm = () => {
     setFirstName("");
     setLastName("");
     setAddress("");
     setDescription("");
+    setDiscountRate("");
   };
 
   const handleFormSubmit = (event) => {
@@ -28,6 +30,7 @@ function PosNewCartModal({ isOpen, onRequestClose }) {
       lastName,
       address,
       description,
+      discountRate,
     });
 
     resetForm();
@@ -91,6 +94,18 @@ function PosNewCartModal({ isOpen, onRequestClose }) {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             className={styles.input}
+          />
+        </div>
+
+        <div className={styles["input-group"]}>
+          <label className={styles.label}>Discount Rate (%)</label>
+          <input
+            type="number"
+            value={discountRate}
+            onChange={(e) => setDiscountRate(e.target.value)}
+            className={styles.input}
+            min="0"
+            max="100"
           />
         </div>
 

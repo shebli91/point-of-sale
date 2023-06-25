@@ -29,15 +29,20 @@ const PosCheckoutBox = () => {
   if (!selectedCart)
     return <p className={styles.noCartMessage}>No cart selected</p>;
 
-  const { client } = selectedCart;
+  const { client, discountRate } = selectedCart;
   const totalPrice = cartProducts.reduce(
     (total, product) => total + product.price * product.quantity,
     0
   );
+  const discountedTotalPrice = totalPrice * (1 - discountRate / 100);
 
   const handleCheckout = () => {
     alert(
-      `Thank you for your purchase\nClient Name: ${selectedCart?.client?.firstName} ${selectedCart?.client?.lastName}\nClient Address: ${selectedCart?.client?.address}\nTotal Price: $${totalPrice}`
+      `Thank you for your purchase\nClient Name: ${
+        selectedCart?.client?.firstName
+      } ${selectedCart?.client?.lastName}\nClient Address: ${
+        selectedCart?.client?.address
+      }\nTotal Price: $${discountedTotalPrice.toFixed(2)}`
     );
 
     deleteCartById(selectedCart.id);
@@ -54,7 +59,13 @@ const PosCheckoutBox = () => {
           <PosProductInCart key={product.id} product={product} />
         ))}
       </div>
-      <p className={styles.total}>Total Price: ${totalPrice}</p>
+      <p className={styles.discountRate}>Discount Rate: {discountRate}%</p>
+      <p className={styles.total}>
+        Total Price: <del>${totalPrice.toFixed(2)}</del>{" "}
+        <span className={styles.discountedPrice}>
+          ${discountedTotalPrice.toFixed(2)}
+        </span>
+      </p>
       <button className={styles.checkoutButton} onClick={handleCheckout}>
         Checkout
       </button>
