@@ -446,7 +446,7 @@
   "units": [
     {
       "id": 1,
-      "name": "kilogram",
+      "name": "kilogramd",
       "baseUnit": "kilogram",
       "conversionFactor": 1,
       "shortName": "kg"
